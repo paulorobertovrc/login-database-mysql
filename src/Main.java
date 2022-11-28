@@ -1,13 +1,28 @@
+import java.util.Scanner;
+
 public class Main {
+    private static boolean continuar = true;
+    private static Scanner scanner = new Scanner(System.in).useDelimiter("\n");
+
     public static void main(String[] args) {
-        AdminUser au = new AdminUser("paulo");
-        CommonUser cu = new CommonUser("roberto");
+        Database.connect();
+        
+        while (continuar) {
+            Menu.clear();
+            Menu.printMenu();
+        }
 
-        au.listUsers();
-        au.createUser("user");
-        au.deleteUser("user");
-        cu.listUsers();
+        System.out.println();
+        System.out.println("PROGRAMA ENCERRADO");
+        System.out.println();
+        scanner.close();
+    }
 
-        ConnectToDb c = new ConnectToDb();
+    public static void finalizar() {
+        continuar = false;
+    }
+
+    public static Scanner getScanner() {
+        return scanner;
     }
 }
