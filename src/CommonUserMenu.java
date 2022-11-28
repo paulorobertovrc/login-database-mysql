@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class CommonUserMenu {
     public CommonUserMenu() {
         System.out.println("[ 1 ] Listar usuários");
-        System.out.println("[ 2 ] Retornar ao menu anterior");
+        System.out.println("[ 2 ] Sair");
         System.out.println();
         System.out.print("Selecione a opção desejada: ");
         Scanner sc = Main.getScanner();
@@ -15,8 +15,7 @@ public class CommonUserMenu {
                 Menu.prosseguir();
                 break;
             case 2:
-                Menu.clear();
-                Menu.printMenu();
+                Main.finalizar();
                 break;        
             default:
                 System.out.println("Opção inválida. Tente novamente.");
