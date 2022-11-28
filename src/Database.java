@@ -30,7 +30,7 @@ public class Database {
                 "`id` INT UNSIGNED NOT NULL AUTO_INCREMENT," + 
                 "`username` VARCHAR(50) NOT NULL," +
                 "`password` VARCHAR(50) NULL DEFAULT NULL," + 
-                "`isAdmin` BIT(1) NOT NULL DEFAULT 0," +
+                "`isAdmin` TINYINT(1) NOT NULL DEFAULT 0," +
                 "PRIMARY KEY (`id`));");
         } catch (SQLException e) {
             e.printStackTrace();
