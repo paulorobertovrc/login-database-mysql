@@ -1,6 +1,7 @@
 public class AdminUser extends User {
     AdminUser(String login) {
         super(login);
+        super.setAdmin();
     }
 
     public void createUser(String login) {
