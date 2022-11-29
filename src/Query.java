@@ -1,5 +1,6 @@
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.sql.Statement;
 
 public class Query {
@@ -20,15 +21,23 @@ public class Query {
             stmt.execute("SELECT ID, USERNAME FROM tbLogin");
             ResultSet rs = stmt.getResultSet();
             while (rs.next()) {
-                int id = rs.getInt("ID");
+                int id = rs.getInt("id");
                 System.out.print (id);
                 System.out.print(" ");
-                String username = rs.getString("USERNAME");
+                String username = rs.getString("username");
                 System.out.println(username);
             }
             
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public static ResultSet fetchUser(String loggingUser) throws SQLException {
+            Statement stmt = conn.createStatement();
+            stmt.execute("SELECT ID, USERNAME FROM tbLogin");
+            ResultSet rs = stmt.getResultSet();
+            
+            return rs;
     }
 }
