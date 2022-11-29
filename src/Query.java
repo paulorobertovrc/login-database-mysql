@@ -35,7 +35,7 @@ public class Query {
 
     public static ResultSet fetchUser(String loggingUser) throws SQLException {
             Statement stmt = conn.createStatement();
-            stmt.execute("SELECT ID, USERNAME FROM tbLogin");
+            stmt.execute("SELECT ID, USERNAME, PASSWORD, isAdmin FROM tbLogin");
             ResultSet rs = stmt.getResultSet();
             
             return rs;
