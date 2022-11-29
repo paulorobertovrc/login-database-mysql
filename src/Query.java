@@ -40,4 +40,17 @@ public class Query {
             
             return rs;
     }
+
+    public static int dbSize() throws SQLException {
+        int dbSize = 0;
+
+        Statement stmt = conn.createStatement();
+        stmt.execute("SELECT COUNT(*) FROM tbLogin");
+        ResultSet rs = stmt.getResultSet();
+        while (rs.next()) {
+            dbSize = rs.getInt("count(*)");
+        }        
+        
+        return dbSize;
+    }
 }
