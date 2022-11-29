@@ -1,14 +1,10 @@
 public class AdminUser extends User {
-    AdminUser(String login) {
-        super(login);
+    AdminUser(int id, String login) {
+        super(id, login);
         super.setAdmin();
     }
 
-    public void createUser(String login) {
-        System.out.println("teste do método createUser da classe AdminUser");
-    }
-
-    public void deleteUser(String login) {
-        System.out.println("teste do método deleteUser da classe AdminUser");
+    public void adminMenu() {
+        new AdminMenu();
     }
 }
