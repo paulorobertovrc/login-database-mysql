@@ -6,7 +6,7 @@ public abstract class User {
     
     public User(int id, String login) {
         this.id = id;
-        this.login = login;
+        User.login = login;
     }
     
     public int getId() {
@@ -32,9 +32,5 @@ public abstract class User {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    User(String login) {
-        this.login = login;
     }
 }
