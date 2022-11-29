@@ -1,7 +1,13 @@
 public abstract class User {
+    private int id;
     private String login = "";
     private String password = "";
     private static boolean isAdmin = false;
+
+    public User(int id, String login) {
+        this.id = id;
+        this.login = login;
+    }
     
     public static void setAdmin() {
         User.isAdmin = true;
