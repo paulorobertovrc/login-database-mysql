@@ -3,12 +3,16 @@ public abstract class User {
     private String login = "";
     private String password = "";
     private static boolean isAdmin = false;
-
+    
     public User(int id, String login) {
         this.id = id;
         this.login = login;
     }
     
+    public int getId() {
+        return id;
+    }
+
     public static void setAdmin() {
         User.isAdmin = true;
     }
@@ -32,8 +36,5 @@ public abstract class User {
 
     User(String login) {
         this.login = login;
-    }
-
-    public void listUsers() {
     }
 }
