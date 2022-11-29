@@ -1,6 +1,6 @@
 public abstract class User {
     private int id;
-    private String login = "";
+    private static String login = "";
     private String password = "";
     private static boolean isAdmin = false;
     
@@ -21,7 +21,7 @@ public abstract class User {
         return isAdmin;
     }
 
-    public String getLogin() {
+    public static String getLogin() {
         return login;
     }
 
