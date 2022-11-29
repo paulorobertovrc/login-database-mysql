@@ -13,8 +13,6 @@ public class Login {
         System.out.print("Senha: ");
         this.password = sc.next();
 
-        System.out.println("Informado: " + loggingUser);
-
         if (!(this.loggingUser.isBlank()) && !(this.password.isBlank())) {
             int id;
             String username = "";
