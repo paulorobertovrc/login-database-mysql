@@ -22,11 +22,13 @@ public class AdminMenu {
             case 1:
                 Menu.clear();
                 new CreateNewUser();
+                Menu.prosseguir();
                 new AdminMenu();
                 break;
             case 2:
                 Menu.clear();
                 new Delete();
+                Menu.prosseguir();
                 new AdminMenu();
                 break;
             case 3:
