@@ -33,7 +33,7 @@ public class AdminMenu {
                 break;
             case 3:
                 Menu.clear();
-                Query.listUsersQuery();
+                new ListUsers();
                 Menu.prosseguir();
                 new AdminMenu();
                 break;

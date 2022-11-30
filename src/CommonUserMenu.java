@@ -18,7 +18,7 @@ public class CommonUserMenu {
         switch (menuOp) {
             case 1:
                 Menu.clear();
-                Query.listUsersQuery();
+                new ListUsers();
                 Menu.prosseguir();
                 new CommonUserMenu();
                 break;
