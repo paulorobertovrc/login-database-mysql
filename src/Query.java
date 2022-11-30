@@ -33,12 +33,38 @@ public class Query {
         }
     }
 
-    public static ResultSet fetchUser(String loggingUser) throws SQLException {
+    public static ResultSet fetchUser(String user) throws SQLException {
             Statement stmt = conn.createStatement();
             stmt.execute("SELECT ID, USERNAME, PASSWORD, isAdmin FROM tbLogin");
             ResultSet rs = stmt.getResultSet();
             
             return rs;
+    }
+
+    public static ResultSet fetchUser(int id) throws SQLException {
+        Statement stmt = conn.createStatement();
+        stmt.execute("SELECT ID, USERNAME, PASSWORD, isAdmin FROM tbLogin WHERE id = " + id);
+        ResultSet rs = stmt.getResultSet();
+        
+        return rs;
+}
+
+    public static void deleteUser(int id) {
+        try {
+            Statement stmt = conn.createStatement();
+            stmt.execute("DELETE FROM tbLogin WHERE id = " + id);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void deleteUser(String username) {
+        try {
+            Statement stmt = conn.createStatement();
+            stmt.execute("DELETE FROM tbLogin WHERE username = '" + username + "'");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 
     public static int dbSize() throws SQLException {
