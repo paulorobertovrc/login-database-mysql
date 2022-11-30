@@ -7,6 +7,11 @@ public class CreateNewUser {
     
     
     CreateNewUser() {
+        System.out.println("===============================================");
+        System.out.println("==========   MENU DO ADMINISTRADOR   ==========");
+        System.out.println("===============================================");
+        System.out.println("Opção selecionada: CRIAR NOVO USUÁRIO");
+        System.out.println();
         System.out.print("Nome do usuário: ");
         Scanner sc = Main.getScanner();
         username = sc.next();
