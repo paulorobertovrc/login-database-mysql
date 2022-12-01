@@ -7,7 +7,7 @@ public class CommonUserMenu {
         System.out.println("==========   MENU DO USUÁRIO COMUM   ==========");
         System.out.println("===============================================");
         System.out.println("Banco de dados: " + Database.getDbName());
-        System.out.println("Usuário: " + User.getLogin());
+        System.out.println("Usuário: " + InstantiateUser.getLoggedUserUsername() + " | ID: " + InstantiateUser.getLoggedUserId());
         System.out.println();
         System.out.println("[ 1 ] Listar usuários");
         System.out.println("[ 2 ] Sair");

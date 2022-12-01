@@ -2,12 +2,13 @@ import java.util.Scanner;
 
 public class AdminMenu {
     public AdminMenu() {
+        // AdminUser usr = new AdminUser(0, null);
         Menu.clear();
         System.out.println("===============================================");
         System.out.println("==========   MENU DO ADMINISTRADOR   ==========");
         System.out.println("===============================================");
         System.out.println("Banco de dados: " + Database.getDbName());
-        System.out.println("Usuário: " + User.getLogin());
+        System.out.println("Usuário: " + InstantiateUser.getLoggedUserUsername() + " | ID: " + InstantiateUser.getLoggedUserId());
         System.out.println();
         System.out.println("[ 1 ] Criar novo usuário");
         System.out.println("[ 2 ] Apagar usuário");
