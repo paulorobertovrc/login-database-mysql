@@ -1,11 +1,34 @@
 public class InstantiateUser {
-    InstantiateUser(int id, String username, int isAdmin) {
+    private static int loggedUserId = 0;    
+    private static String loggedUserUsername = "";
+
+    public InstantiateUser(int id, String username, int isAdmin) {
         if (isAdmin == 1) {
-            AdminUser loggUser = new AdminUser(id, username);
-            loggUser.adminMenu();
+            AdminUser loggedUser = new AdminUser(id, username);
+            loggedUserId = id;
+            loggedUserUsername = username;
+            loggedUser.adminMenu();
         } else {
-            CommonUser loggUser = new CommonUser(id, username);
-            loggUser.commonMenu();
+            CommonUser loggedUser = new CommonUser(id, username);
+            loggedUserId = id;
+            loggedUserUsername = username;
+            loggedUser.commonMenu();
         }
+    }
+
+    public static AdminUser loggedUserisAdminUser(AdminUser adminUser) {
+        return adminUser;
+    }
+
+    public static CommonUser loggedUserisCommonUser(CommonUser commonUser) {
+        return commonUser;
+    }
+
+    public static int getLoggedUserId() {
+        return loggedUserId;
+    }
+    
+    public static String getLoggedUserUsername() {
+        return loggedUserUsername;
     }
 }
