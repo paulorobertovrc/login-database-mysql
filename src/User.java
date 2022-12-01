@@ -1,12 +1,12 @@
 public abstract class User {
     private int id;
-    private static String login = "";
+    private String login = "";
     private String password = "";
     private static boolean isAdmin = false;
     
     public User(int id, String login) {
         this.id = id;
-        User.login = login;
+        this.login = login;
     }
     
     public int getId() {
@@ -21,7 +21,7 @@ public abstract class User {
         return isAdmin;
     }
 
-    public static String getLogin() {
+    public String getLogin() {
         return login;
     }
 
