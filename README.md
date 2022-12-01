@@ -1,5 +1,3 @@
-- Melhorar tela de exibição da lista
-
 ----------
 
 - Acesso e manipulação de dados em banco mySQL utilizando a biblioteca JDBC
@@ -20,3 +18,4 @@
 - O acesso ao sistema é feito mediante validação de usuário e senha
 - Se o login for realizado com sucesso, são exibidas diferentes opções a depender do tipo do usuário logado (comum ou administrador)
 - O sistema roda em loop até que o usuário escolha a opção sair através do menu
+- Este projeto não utilizou framework
