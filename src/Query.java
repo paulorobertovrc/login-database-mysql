@@ -15,22 +15,19 @@ public class Query {
         }
     }
     
-    public static void listUsersQuery() {
+    public static ResultSet listUsersQuery() {
+        ResultSet rs;
+        
         try {
             Statement stmt = conn.createStatement();
-            stmt.execute("SELECT ID, USERNAME FROM tbLogin");
-            ResultSet rs = stmt.getResultSet();
-            while (rs.next()) {
-                int id = rs.getInt("id");
-                System.out.print (id);
-                System.out.print(" ");
-                String username = rs.getString("username");
-                System.out.println(username);
-            }
-            
+            stmt.execute("SELECT ID, USERNAME, isAdmin FROM tbLogin");
+            rs = stmt.getResultSet();
+            return rs;            
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+        return rs = null;
     }
 
     public static ResultSet fetchUser(String user) throws SQLException {
