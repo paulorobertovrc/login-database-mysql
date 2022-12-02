@@ -25,3 +25,6 @@ Main features:
 - The password entered at the time of registration is subjected to a function that generates a hash, which is stored in the database for later validation. The algorithm used was MD5 from the Java Security library;
 - Access to the system is done through username and password validation;
 - The system runs in a loop until the user chooses the exit option through the menu.
+
+Required external library: mysql-connector-j-8.0.31.jar
+
