@@ -14,7 +14,18 @@ public class CommonUserMenu {
         System.out.println();
         System.out.print("Selecione a opção desejada: ");
         Scanner sc = Main.getScanner();
-        int menuOp = sc.nextInt();
+        int menuOp = -1;
+        boolean validInput = false;
+
+        do {
+            try {
+                menuOp = sc.nextInt();
+                validInput = true;
+            } catch (Exception e) {
+                e.getStackTrace();
+            }
+        } while (!validInput || menuOp < 1 || menuOp > 2);
+
         switch (menuOp) {
             case 1:
                 Menu.clear();
