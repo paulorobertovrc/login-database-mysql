@@ -2,10 +2,10 @@ import java.util.Scanner;
 
 public class Delete {
     public Delete() {
-        System.out.println("===============================================");
-        System.out.println("==========   MENU DO ADMINISTRADOR   ==========");
-        System.out.println("===============================================");
-        System.out.println("Opção selecionada: APAGAR USUÁRIO");
+        System.out.println("==============================================");
+        System.out.println("=============   APAGAR USUÁRIO   =============");
+        System.out.println("==============================================");
+        System.out.println("Usuário: " + InstantiateUser.getLoggedUserUsername() + " | ID: " + InstantiateUser.getLoggedUserId());
         System.out.println();
         
         System.out.println("[ 1 ] Apagar por ID | [ 2 ] Apagar por nome de usuário");

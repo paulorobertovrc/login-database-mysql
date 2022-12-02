@@ -7,6 +7,10 @@ public class Login {
     private String loggingPassword = "";
     
     Login() {
+        System.out.println("=============================================");
+        System.out.println("============         LOGIN       ============");
+        System.out.println("=============================================");
+        System.out.println();
         System.out.print("Nome do usuário: ");
         Scanner sc = Main.getScanner();
         this.loggingUser = sc.next();

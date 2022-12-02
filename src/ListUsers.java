@@ -8,6 +8,7 @@ public class ListUsers {
         System.out.println("=============================================");
         System.out.println("============   LISTAR USUÁRIOS   ============");
         System.out.println("=============================================");
+        System.out.println("Usuário: " + InstantiateUser.getLoggedUserUsername() + " | ID: " + InstantiateUser.getLoggedUserId());
         System.out.println();
 
         List<User> userList = new ArrayList<>();
